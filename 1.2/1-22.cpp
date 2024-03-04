@@ -26,7 +26,12 @@ void getNumberPattern(int n)
     {
         for (int j = 0; j < max_row; j++)
         {
-                }
+            int top = i;
+            int left = j;
+            int right = (2 * n - 1) - 1 - j;
+            int bottom = (2 * n - 1) - 1 - i;
+            cout << n - (min(min(top, bottom), min(left, right))) << " ";
+        }
         cout << endl;
     }
 }
